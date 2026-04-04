@@ -30,26 +30,51 @@
         h1, h2 { color: #2c3e50; }
         header h1 { color: #fff; margin: 0; }
         ul { line-height: 1.8; }
-        .section { margin-bottom: 20px; }
+        .section { margin-bottom: 30px; }
+        
+        /* New styles for the image gallery */
+        .gallery {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .gallery-item {
+            flex: 1 1 calc(33.333% - 20px);
+            min-width: 220px; /* Ensures they stack on small phone screens */
+            text-align: center;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 200px; /* Keeps all images the same height */
+            object-fit: cover; /* Prevents images from stretching weirdly */
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .gallery-item p {
+            margin-top: 10px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Amitoj Sidhu's Portfolio</h1>
+        <h1>Sidhu's Portfolio</h1>
     </header>
     
     <div class="container">
         <section class="section">
             <h2>About Me</h2>
-            <p>Hello! I am a second year Environmental Studies student based in Ontario, Canada. My long term goals are to graduate, earn my Master's degree, and transition into a career with the City of Toronto in the urban planning sector. I am deeply passionate about community development and aim to help build shelters to bring down the homeless population by placing at risk individuals into safe, supportive environments.</p>
+            <p>Hello! I am a second year Environmental Studies student based in Ontario, Canada. My long-term goals are to graduate, earn my Master's degree, and transition into a career with the City of Toronto in the urban planning sector. I am deeply passionate about community development and aim to help build shelters to bring down the homeless population by placing at risk individuals into safe, supportive environments.</p>
         </section>
 
         <section class="section">
             <h2>Interests & Hobbies</h2>
             <ul>
                 <li><strong>Fitness & Sports:</strong> I enjoy staying highly active and pushing my limits through powerlifting and boxing.</li>
-                <li><strong>Automotive & Audio:</strong> Lexus IS enthusiast with a deep interest in custom car audio systems, including fine-tuning amplifiers and subwoofers.</li>
-                <li><strong>Music:</strong> Big fan of Punjabi music and comparing high-quality headphones for the best bass and sound quality.</li>
+                <li><strong>Automotive & Audio:</strong> Lexus IS enthusiast with a deep interest in custom car audio systems, including fine tuning amplifiers and subwoofers. I also like to learn about cars in my free time and modify my Lexus IS as a hobby. It is quite an expensive hobby, sadly. </li>
+                <li><strong>Music:</strong> Big fan of Punjabi music and comparing high quality headphones for the best bass and sound quality.</li>
                 <li><strong>Art & Design:</strong> Interested in creative tattoo designs, particularly themes involving nature and compasses.</li>
             </ul>
         </section>
@@ -57,6 +82,24 @@
         <section class="section">
             <h2>Projects & Coursework</h2>
             <p>My current academic focus revolves around my Environmental Studies coursework, building a strong foundation for future urban planning and community development initiatives.</p>
+        </section>
+
+        <section class="section">
+            <h2>Gallery</h2>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="my-car.jpg" alt="My Lexus IS">
+                    <p>The Lexus IS</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="gym.jpg" alt="Powerlifting and Boxing">
+                    <p>In the Gym</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="urban-planning.jpg" alt="Toronto Urban Planning Vision">
+                    <p>Future in Urban Planning</p>
+                </div>
+            </div>
         </section>
     </div>
 </body>
