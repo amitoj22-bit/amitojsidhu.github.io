@@ -4,57 +4,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amitoj Sidhu's Personal Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
     <style>
+        /* Global Styles */
         body { 
-            font-family: Arial, sans-serif; 
+            font-family: 'Poppins', sans-serif; 
             margin: 0; 
             padding: 0; 
-            background-color: #f4f4f4; 
-            color: #333;
+            background-color: #f0f2f5; 
+            color: #4a4a4a;
+            line-height: 1.6;
         }
+        
+        /* Modern gradient header */
         header { 
-            background: #2c3e50; 
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
             color: #fff; 
-            padding: 2rem 0; 
+            padding: 4rem 0 5rem 0; 
             text-align: center; 
         }
-        .container { 
-            width: 80%; 
-            max-width: 900px;
-            margin: 20px auto; 
-            padding: 20px; 
-            background: white; 
-            border-radius: 8px; 
-            box-shadow: 0 0 10px rgba(0,0,0,0.1); 
+        header h1 { 
+            margin: 0; 
+            font-size: 2.8rem;
+            letter-spacing: 1px;
         }
-        h1, h2 { color: #2c3e50; }
-        header h1 { color: #fff; margin: 0; }
-        ul { line-height: 1.8; }
-        .section { margin-bottom: 30px; }
+
+        /* Main content container with a floating overlap effect */
+        .container { 
+            width: 85%; 
+            max-width: 1000px;
+            margin: -60px auto 40px auto; 
+            padding: 40px; 
+            background: white; 
+            border-radius: 12px; 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1); 
+        }
+
+        /* Section Headings */
+        h2 { 
+            color: #2a5298; 
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 10px;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+        .section { 
+            margin-bottom: 50px; 
+        }
         
-        /* New styles for the image gallery */
+        /* Upgraded List Styling for Interests */
+        ul { 
+            list-style-type: none;
+            padding-left: 0;
+        }
+        ul li {
+            background: #f8fafc;
+            margin-bottom: 15px;
+            padding: 20px;
+            border-left: 5px solid #2a5298; 
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        /* Upgraded Image Gallery with Hover Animations */
         .gallery {
             display: flex;
-            gap: 20px;
+            gap: 25px;
             flex-wrap: wrap;
             justify-content: space-between;
+            margin-top: 30px;
         }
         .gallery-item {
-            flex: 1 1 calc(33.333% - 20px);
-            min-width: 220px; /* Ensures they stack on small phone screens */
+            flex: 1 1 calc(33.333% - 25px);
+            min-width: 250px; 
             text-align: center;
+            background: #fff;
+            border-radius: 12px;
+            padding: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            transition: transform 0.3s ease, box-shadow 0.3s ease; 
         }
+        
+        /* Hover effect */
+        .gallery-item:hover {
+            transform: translateY(-8px); 
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15); 
+        }
+        
         .gallery-item img {
             width: 100%;
-            height: 200px; /* Keeps all images the same height */
-            object-fit: cover; /* Prevents images from stretching weirdly */
+            height: 220px; 
+            object-fit: cover; 
             border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
         .gallery-item p {
-            margin-top: 10px;
-            font-weight: bold;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            font-weight: 600;
             color: #2c3e50;
+            font-size: 1.1rem;
         }
     </style>
 </head>
